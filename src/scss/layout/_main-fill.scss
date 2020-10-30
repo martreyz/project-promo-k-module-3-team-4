@@ -1,0 +1,54 @@
+.fill {
+  border-top: 1px solid $white-two;
+  margin: 0px 19px 30px 20px;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 5px 0;
+    &:hover {
+      cursor: pointer;
+    }
+    &--container {
+      display: flex;
+      align-items: center;
+      .keyboard {
+        font-size: 18px;
+        color: $dull-orange;
+        margin-right: 8px;
+      }
+      .container--text {
+        font-family: $font-generalTexts;
+        font-size: 18px;
+        font-weight: 600;
+        color: $reset-color;
+        text-transform: uppercase;
+      }
+    }
+    &--arrow {
+      color: $reset-color;
+      font-size: 18px;
+      z-index: 2;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &--label {
+      padding: 20px 0 7px 0;
+      font-family: $font-generalTexts;
+      color: $dark-text;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &--input {
+      height: 30px;
+      border: 1px solid $border-links-color;
+      padding: 3px 0 7px 9px;
+      font-family: $font-generalTexts;
+      &::-webkit-input-placeholder {
+        color: $placeholder-color;
+      }
+    }
+  }
+}

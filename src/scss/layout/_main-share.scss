@@ -1,0 +1,120 @@
+.share {
+  border-top: 1px solid $white-two;
+  border-bottom: 1px solid $white-two;
+  margin: 0px 19px 30px 20px;
+  z-index: 10;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+    &--container {
+      display: flex;
+      align-items: center;
+      .container-share {
+        font-size: 18px;
+        color: $dull-orange;
+        margin-right: 12px;
+      }
+      .container-text {
+        font-family: $font-generalTexts;
+        font-size: 18px;
+        font-weight: 600;
+        color: $reset-color;
+        text-transform: uppercase;
+      }
+    }
+    &--arrow {
+      color: $reset-color;
+      font-size: 18px;
+    }
+  }
+  &__button {
+    width: 199px;
+    height: 50px;
+    background-color: $white-three;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 30px auto;
+    z-index: 20;
+
+    &--icon {
+      font-size: 22px;
+    }
+    &--text {
+      font-family: $font-generalTexts;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-left: 9px;
+    }
+  }
+  &__finish {
+    // border-bottom: 1px solid $white-two;
+    border-top: 1px solid $white-two;
+    padding: 20px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--title {
+      font-family: $font-generalTexts;
+      font-size: 18px;
+      font-weight: 600;
+      color: $gunmetal;
+    }
+    &--text {
+      font-family: $font-generalTexts;
+      font-weight: 600;
+      font-size: 12px;
+      text-align: center;
+      color: $dull-orange;
+      margin-top: 5px;
+    }
+    &--anchor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $button-background;
+      color: $white;
+      width: 181px;
+      height: 30px;
+      border-radius: 3px;
+      text-decoration: none;
+      margin-top: 10px;
+      .anchor-icon {
+        font-size: 18px;
+      }
+      .anchor-text {
+        font-family: $font-generalTexts;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 9.5px;
+      }
+    }
+  }
+  .js-button-create {
+    background-color: $dull-orange;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .js__finish-hidden {
+    display: none;
+  }
+  .card-link {
+    text-decoration: none;
+    color: $dull-orange;
+  }
+  .paragraph {
+    font-family: $font-generalTexts;
+  }
+}

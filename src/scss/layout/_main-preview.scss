@@ -1,0 +1,96 @@
+.preview {
+  background: linear-gradient(to bottom, $background-first, $background-second);
+  height: 457px;
+  padding: 38px 35px 40px 45px;
+  @media all and (min-width: 768px) {
+    height: 100%;
+    grid-column: 2/3;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    align-items: center;
+    .preview-button-div {
+      width: 240px;
+    }
+  }
+  &__button {
+    width: 75px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+    &--trash {
+      color: $reset-color;
+      width: 11px;
+      height: 20px;
+      line-height: 20px;
+    }
+    &--text {
+      font-family: $font-generalTexts;
+      font-size: 12px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $reset-color;
+      margin-left: 8px;
+    }
+  }
+  &__card {
+    width: 240px;
+    height: 329px;
+    background-color: $white;
+    margin-top: 20px;
+    padding-top: 21px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px 0 $reset-color;
+    &--text {
+      padding-left: 15px;
+      border-left: 5px solid $dirty-blue;
+      .text-name {
+        font-family: $font-card;
+        font-size: 18px;
+        line-height: 20px;
+        color: $dark-text;
+      }
+      .text-work {
+        font-family: $font-card;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 20px;
+        color: $reset-color;
+        margin-top: 4px;
+      }
+    }
+    &--img {
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+    }
+    &--nav {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      padding: 10px 0 0 10px;
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border: 2px solid $border-links-color;
+        border-radius: 50%;
+        text-decoration: none;
+        color: $dark-text;
+        margin-left: 10px;
+      }
+    }
+  }
+}

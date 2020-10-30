@@ -1,0 +1,17 @@
+@import "layout/js-collapsables";
+
+.main-aplication {
+  @media all and (min-width: 768px) {
+    min-height: calc(100vh - 171px);
+    background: linear-gradient(to bottom, $lightgrey, $white);
+    padding: 20px 40px 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    // grid-template-rows: 1fr;
+    &__section {
+      grid-row: 1/2;
+    }
+  }
+}

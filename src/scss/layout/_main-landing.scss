@@ -1,0 +1,113 @@
+.body {
+  height: 100vh;
+}
+.main {
+  height: 100%; //Damos altura en vh para poder dar porcentajes dentro
+  border-bottom: 1px solid $white-two;
+  background-color: $lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 95px;
+  // padding: 95px 27.2px 30px 28px;
+  @media all and (min-width: 768px) {
+    justify-content: center;
+    padding-top: 0;
+    // padding: 350px 175px 59px 175px;
+  }
+
+  &__logo {
+    width: 250px;
+    height: 63px;
+    object-fit: contain;
+    @media all and (min-width: 768px) {
+      height: 105px;
+      width: 419px;
+    }
+  }
+
+  &__title {
+    color: $dull-orange;
+    font-family: $font-titleMain;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 35.4px;
+    @media all and (min-width: 768px) {
+      margin-top: 31px;
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    width: 265px;
+    font-family: $font-generalTexts;
+    font-size: 13px;
+    text-align: center;
+    width: 265px;
+    @media all and (min-width: 768px) {
+      width: 331px;
+      font-size: 16px;
+      width: 331px;
+    }
+  }
+  &__icons {
+    border: 1.6px solid rgba(225, 115, 52, 0.21);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 268px;
+    height: 73.8px;
+    margin-top: 17.8px;
+    @media all and (min-width: 768px) {
+      margin-top: 27px;
+    }
+
+    &__item {
+      text-align: center;
+      &__logo {
+        font-size: 22.4px;
+        color: $dull-orange;
+        @media all and (min-width: 768px) {
+          font-size: 28px;
+        }
+      }
+      &__text {
+        color: $gunmetal;
+        font-family: $font-generalTexts;
+        font-size: 12.8px;
+        @media all and (min-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    font-family: $font-generalTexts;
+    font-size: 16px;
+    font-weight: 600;
+    height: 42px;
+    width: 129px;
+    border-radius: 21px;
+    background-color: $dirty-blue;
+    text-align: center;
+    line-height: 42px;
+    margin-top: 38.6px;
+    margin-bottom: 30px;
+    color: $white;
+    margin-top: 38.6px;
+    @media all and (min-height: 720px) {
+      margin-top: 186px;
+    }
+  }
+}
+//PONER EN COMPONENTS?
+.links {
+  text-decoration: none;
+}
+//PONER EN COMPONENTS?
+.uppercase {
+  text-transform: uppercase;
+}

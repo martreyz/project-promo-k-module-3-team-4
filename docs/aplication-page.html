@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Awesome profile cards</title>
+    <script
+      src="https://kit.fontawesome.com/9a5198306a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/aplication-page.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html">
+        <img
+        src="./assets/images/logo-awesome-profile-cards.svg"
+        alt="Logo de la página"
+        title="Logo de la página"
+        class="header__img"
+        />
+      </a>
+      
+    </header>
+
+    <main class="main-aplication">
+      <section class="preview">
+        <div class="preview-button-div">
+          <button class="preview__button js__btn-reset">
+            <i class="far fa-trash-alt preview__button--trash"></i>
+            <p class="preview__button--text">Reset</p>
+          </button>
+        </div>
+        <div class="preview__card js-preview__card">
+          <div class="preview__card--text js-preview__card--text">
+            <h3 class="text-name js__preview-name js-text-name">Nombre Apellido</h3>
+            <h4 class="text-work js__preview-job js-text-work">
+              Front-end developer
+            </h4>
+          </div>
+          <div
+            class="profile__image preview__card--img js__profile-image"
+            style="background-image: url('./assets/images/totoro.jpg')"
+          ></div>
+          <nav>
+            <ul class="preview__card--nav">
+              <li>
+                <a href="" class="icons js__preview-phone js-icons" target="blank">
+                  <i class="fas fa-mobile-alt"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="icons js__preview-mail js-icons" target="blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="icons js__preview-linkedin js-icons" target="blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="icons js__preview-github js-icons" target="blank">
+                  <i class="fab fa-github-alt"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section class="main-aplication__section">
+        <section class="design">
+          <div class="design__title js-collapsable-title">
+            <div class="design__title--container">
+              <i class="far fa-object-ungroup design-icon"></i>
+              <h2 class="design__title--container--text">Diseña</h2>
+            </div>
+            <i class="fa fa-chevron-up design__title--arrow js-fa-chevron-up"></i>
+          </div>
+          <form class="design__form js-design__form" action="" method="post">
+            <p class="design__form--label uppercase">Colores</p>
+
+            <div class="design__container__options">
+              <label for="cold" class="design__container__options__cold">
+                <input
+                  type="radio"
+                  id="cold"
+                  name="palette"
+                  value="cold"
+                  checked
+                  class="js-inputCold"
+                />
+                <div class="palette-cold">
+                  <span class="a js-paletteColdA"></span>
+                  <span class="b js-paletteColdB"></span>
+                  <span class="c js-paletteColdC"></span>
+                </div>
+              </label>
+              <label for="warm" class="design__container__options__warm warm">
+                <input
+                  id="warm"
+                  type="radio"
+                  name="palette"
+                  value="warm"
+                  class="js-inputWarm"
+                />
+                <div class="palette-warm">
+                  <span class="a js-paletteWarmA"></span>
+                  <span class="b js-paletteWarmB"></span>
+                  <span class="c js-paletteWarmC"></span>
+                </div>
+              </label>
+              <label for="medium" class="design__container__options__medium">
+                <input
+                  id="medium"
+                  type="radio"
+                  name="palette"
+                  value="medium"
+                  class="js-inputMedium"
+                />
+                <div class="palette-medium">
+                  <span class="a js-palette-mediumA"></span>
+                  <span class="b js-palette-mediumB"></span>
+                  <span class="c js-palette-mediumC"></span>
+                </div>
+              </label>
+            </div>
+          </form>
+        </section>
+
+        <section class="fill">
+          <div class="fill__title js-collapsable-title">
+            <div class="fill__title--container">
+              <i class="far fa-keyboard keyboard"></i>
+              <h2 class="container--text">Rellena</h2>
+            </div>
+            <i class="fas fa-chevron-up js-fa-chevron-up fill__title--arrow"></i>
+          </div>
+          <form class="fill__form js-fill__form" action="" method="post">
+            <label for="name" class="fill__form--label">Nombre completo</label>
+            <input
+              class="fill__form--input js__form js-input-name"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ej: Sally Hill"
+              maxlength="20"
+            />
+            <label for="work" class="fill__form--label">Puesto</label>
+            <input
+              class="fill__form--input js__form js-input-job"
+              type="text"
+              id="work"
+              name="job"
+              placeholder="Ej: Front-end unicorn"
+              maxlength="24"
+            />
+            <label for="img" class="fill__form--label">Imagen de perfil</label>
+            <!-- <div> -->
+
+            <div class="action">
+              <button class="action__upload-btn js__profile-trigger" type="button">
+                Añadir imagen
+              </button>
+              <input
+                type="file"
+                name=""
+                id="img-selector"
+                class="action__hiddenField js__profile-upload-btn"
+              />
+
+              <div class="profile__preview js__profile-preview"></div>
+            </div>
+
+            <!-- </div> -->
+            <label for="email" class="fill__form--label">Email</label>
+            <input
+              class="fill__form--input js__form js-input-mail"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ej: sally-hill@gmail.com"
+            />
+            <label for="phone" class="fill__form--label js__label-phone"
+              >Teléfono</label
+            >
+            <input
+              class="fill__form--input js__form js-input-phone"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Ej: 555-55-55-55"
+            />
+            <label for="linkedin" class="fill__form--label">Linkedin</label>
+            <input
+              class="fill__form--input js__form js-input-linkedin"
+              type="text"
+              id="linkedin"
+              name="linkedin"
+              placeholder="Ej: linkedin.com/in/sally.hill"
+            />
+            <label for="github" class="fill__form--label">Github</label>
+            <input
+              class="fill__form--input js__form js-input-github"
+              type="text"
+              id="github"
+              name="github"
+              placeholder="Ej: @sally-hill"
+            />
+          </form>
+        </section>
+
+        <section class="share js-share">
+          <div class="share__title js-collapsable-title">
+            <div class="share__title--container">
+              <i class="fas fa-share-alt container-share"></i>
+              <h2 class="container-text">Comparte</h2>
+            </div>
+            <i class="fas fa-chevron-up js-fa-chevron-up share__title--arrow"></i>
+          </div>
+          <div class="share__section js-share__section">
+            <button class="share__button js__btn" disabled>
+              <i class="far fa-address-card share__button--icon"></i>
+              <p class="share__button--text">Crear tarjeta</p>
+            </button>
+            <div class="share__finish js__share__finish js__finish-hidden">
+              <h3 class="share__finish--title">La tarjeta ha sido creada:</h3>
+              <p class="share__finish--text"></p>
+              <a class="share__finish--anchor" href="" target="blank">
+                <i class="fab fa-twitter anchor-icon"></i>
+                <p class="anchor-text">Compartir en twitter</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+
+      </section>
+    </main>
+    <footer class="footer ">
+      <small class="footer__copy">Script Girls. Awesome profile-cards &copy; 2020 </small>
+      <img class=footer__logo src="./assets/images/logo-adalab.png" title="Logo Adalab" alt="Logo Adalab">
+    </footer>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>

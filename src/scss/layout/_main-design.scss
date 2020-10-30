@@ -1,0 +1,170 @@
+.design {
+  margin: 27px 20px 30px 20px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 22px 0;
+    &:hover {
+      cursor: pointer;
+    }
+    &--arrow {
+      color: $reset-color;
+      font-size: 18px;
+      z-index: 1;
+    }
+
+    &--container {
+      display: flex;
+      align-items: center;
+
+      &--text {
+        font-family: $font-generalTexts;
+        font-size: 18px;
+        font-weight: 600;
+        color: $reset-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &-icon {
+    font-size: 18px;
+    color: $dull-orange;
+    margin-right: 8px;
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+
+    &--label {
+      font-family: $font-generalTexts;
+      color: $dark-text;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  @media all and (min-width: 768px) {
+    margin: 0 20px 30px 20px;
+  }
+}
+
+//----------
+.uppercase {
+  text-transform: uppercase;
+}
+
+.design__container__options {
+  width: 7.5rem;
+  display: inline-block;
+  text-align: end;
+
+  &__cold,
+  &__warm,
+  &__medium {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .palette-cold,
+  .palette-warm,
+  .palette-medium {
+    display: flex;
+  }
+
+  .palette-cold span,
+  .palette-warm span,
+  .palette-medium span {
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    margin: 0;
+  }
+
+  .warm {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+//DESIGN PALETTES
+.palette-cold .a {
+  background-color: $dark-text;
+}
+
+.palette-cold .b {
+  background-color: $dirty-blue;
+}
+.palette-cold .c {
+  background-color: $border-links-color;
+}
+
+.palette-warm .a {
+  background-color: $dried-blood;
+}
+
+.palette-warm .b {
+  background-color: $rusty-red;
+}
+.palette-warm .c {
+  background-color: $tomato;
+}
+
+.palette-medium .a {
+  background-color: $slate;
+}
+.palette-medium .b {
+  background-color: $faded-orange;
+}
+
+.palette-medium .c {
+  background-color: $light-grey-blue;
+}
+//PALETTE COLD
+
+.js-paletteCold {
+  & .js-text-name {
+    color: $dark-text;
+  }
+  & .js-preview__card--text {
+    border-color: $dirty-blue;
+  }
+  & .js-icons {
+    border-color: $border-links-color;
+    color: $dark-text;
+  }
+}
+
+//PALETTE WARM
+.js-paletteWarm {
+  & .js-text-name {
+    color: $dried-blood;
+  }
+  & .js-preview__card--text {
+    border-color: $rusty-red;
+  }
+  & .js-icons {
+    border-color: $tomato;
+    color: $dried-blood;
+  }
+}
+
+//PALETTE MEDIUM
+
+.js-paletteMedium {
+  & .js-text-name {
+    color: $slate;
+  }
+  & .js-preview__card--text {
+    border-color: $faded-orange;
+  }
+  & .js-icons {
+    border-color: $light-grey-blue;
+    color: $slate;
+  }
+}
