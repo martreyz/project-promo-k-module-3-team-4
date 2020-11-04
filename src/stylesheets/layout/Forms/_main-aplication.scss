@@ -1,4 +1,5 @@
-@import "layout/js-collapsables";
+@import './js-collapsables';
+@import '../../core/variables';
 
 .main-aplication {
   @media all and (min-width: 768px) {

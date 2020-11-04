@@ -2,7 +2,7 @@
   "name": "project-promo-k-module-3-team-4",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docs":"rm -rf docs && react-scripts build && mv build docs"
+    "docs": "rm -rf docs && react-scripts build && mv build docs"
   },
   "eslintConfig": {
     "extends": [
