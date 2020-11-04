@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from '../images/logo-awesome-profile-cards.svg';
 import footerLogo from '../images/logo-adalab.png';
 import '../stylesheets/App.scss';
+import Header from "./Header";
 
 class App extends React.Component {
   // constructor(props) {
@@ -11,16 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <header className="header">
-          <a href="./index.html">
-            <img
-              src={logo}
-              alt="Logo de la página"
-              title="Logo de la página"
-              className="header__img"
-            />
-          </a>
-        </header>
+        <Header />
         <main className="main-aplication">
           <section className="preview">
             <div className="preview-button-div">
@@ -43,7 +34,7 @@ class App extends React.Component {
                 <ul className="preview__card--nav">
                   <li>
                     <a
-                      href=""
+                      href="/"
                       className="icons js__preview-phone js-icons"
                       target="blank"
                     >
@@ -52,7 +43,7 @@ class App extends React.Component {
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="/"
                       className="icons js__preview-mail js-icons"
                       target="blank"
                     >
@@ -61,7 +52,7 @@ class App extends React.Component {
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="/"
                       className="icons js__preview-linkedin js-icons"
                       target="blank"
                     >
@@ -70,7 +61,7 @@ class App extends React.Component {
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="/"
                       className="icons js__preview-github js-icons"
                       target="blank"
                     >
@@ -272,7 +263,7 @@ class App extends React.Component {
                     La tarjeta ha sido creada:
                   </h3>
                   <p className="share__finish--text"></p>
-                  <a className="share__finish--anchor" href="" target="blank">
+                  <a className="share__finish--anchor" href="/" target="blank">
                     <i className="fab fa-twitter anchor-icon"></i>
                     <p className="anchor-text">Compartir en twitter</p>
                   </a>
