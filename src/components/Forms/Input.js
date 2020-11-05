@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Input extends React.Component {
   render() {
@@ -22,6 +23,17 @@ class Input extends React.Component {
 
 Input.defaultProps = {
   inputType: "text",
+};
+
+Input.propTypes = {
+  inputType: PropTypes.string,
+  htmlFor: PropTypes.string.isRequired,
+  labelTitle: PropTypes.string.isRequired,
+  inputID: PropTypes.string.isRequired,
+  inputName: PropTypes.string.isRequired,
+  inputPlaceholder: PropTypes.string.isRequired,
+  inputMaxLenght: PropTypes.number.isRequired,
+  classN: PropTypes.string.isRequired,
 };
 
 export default Input;
