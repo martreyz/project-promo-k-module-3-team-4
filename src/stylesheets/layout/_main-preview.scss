@@ -1,4 +1,4 @@
-@import '../core/variables';
+@import "../core/variables";
 
 .preview {
   background: linear-gradient(to bottom, $background-first, $background-second);
@@ -75,7 +75,7 @@
       width: 100%;
       height: 200px;
       margin-top: 10px;
-      background-image: url('../../images/totoro.jpg');
+      // background-image: url("../../images/totoro.jpg");
     }
     &--nav {
       list-style: none;
