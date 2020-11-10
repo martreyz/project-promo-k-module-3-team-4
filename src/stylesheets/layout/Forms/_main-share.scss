@@ -1,20 +1,27 @@
-@import '../../core/variables';
-.share {
-  border-top: 1px solid $white-two;
-  border-bottom: 1px solid $white-two;
+@import "../../core/variables";
+
+//Crear de nuevo la section/div en caso de miguel que engloba cada colapsable tema bordes:
+.borderContainer {
+  border-bottom: 0.5px solid $white-two; // Metemos borde aquí
+}
+
+.collapsable {
+  // cambiado el nombre para que sea más genérico
   margin: 0px 19px 30px 20px;
   z-index: 10;
   &__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    padding: 10px 0px 7px 0px; // añadidos padding para que no se quede muy achaparrao
+
     &:hover {
       cursor: pointer;
     }
     &--container {
       display: flex;
       align-items: center;
+
       .container-share {
         font-size: 18px;
         color: $dull-orange;
@@ -33,6 +40,8 @@
       font-size: 18px;
     }
   }
+}
+.share {
   &__button {
     width: 199px;
     height: 50px;

@@ -1,7 +1,11 @@
-@import './js-collapsables';
-@import '../../core/variables';
+@import "./js-collapsables";
+@import "../../core/variables";
 
 .main-aplication {
+  &__section {
+    padding: 27px 20px 0px 20px;
+  }
+
   @media all and (min-width: 768px) {
     min-height: calc(100vh - 171px);
     background: linear-gradient(to bottom, $lightgrey, $white);

@@ -1,4 +1,4 @@
-@import '../../core/variables';
+@import "../../core/variables";
 .design {
   margin: 27px 20px 30px 20px;
 
@@ -6,7 +6,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 22px 0;
     &:hover {
       cursor: pointer;
     }
@@ -37,7 +36,7 @@
   &__form {
     display: flex;
     justify-content: space-between;
-
+    margin: 22px 0px 30px 27px;
     &--label {
       font-family: $font-generalTexts;
       color: $dark-text;

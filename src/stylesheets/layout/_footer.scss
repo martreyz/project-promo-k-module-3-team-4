@@ -1,4 +1,4 @@
-@import '../core/variables';
+@import "../core/variables";
 .footer {
   border-top: 1px solid $white-two;
   width: 100%;
@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-top: 31px;
   padding: 18px 0 20px 0; //por ahora no hace falta laterales
 
   @media all and (min-width: 768px) {

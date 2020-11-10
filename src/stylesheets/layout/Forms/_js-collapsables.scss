@@ -1,9 +1,9 @@
+@import "../../core/variables";
 .js-design__form {
   opacity: 0;
   overflow: hidden;
   height: 0px;
   transition: 0.5s linear;
-  //margin-bottom: -45px;
 }
 
 .js-fa-chevron-up {
