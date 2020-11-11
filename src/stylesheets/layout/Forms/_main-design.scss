@@ -1,42 +1,9 @@
-@import '../../core/variables';
+@import "../../core/variables";
 .design {
-  margin: 27px 20px 30px 20px;
-
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0 22px 0;
-    &:hover {
-      cursor: pointer;
-    }
-    &--arrow {
-      color: $reset-color;
-      font-size: 18px;
-      z-index: 1;
-    }
-
-    &--container {
-      display: flex;
-      align-items: center;
-
-      &--text {
-        font-family: $font-generalTexts;
-        font-size: 18px;
-        font-weight: 600;
-        color: $reset-color;
-        text-transform: uppercase;
-      }
-    }
-  }
-  &-icon {
-    font-size: 18px;
-    color: $dull-orange;
-    margin-right: 8px;
-  }
   &__form {
     display: flex;
     justify-content: space-between;
+    margin: 22px 0px 30px 27px;
 
     &--label {
       font-family: $font-generalTexts;

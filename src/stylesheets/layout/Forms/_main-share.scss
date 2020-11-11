@@ -1,38 +1,6 @@
-@import '../../core/variables';
+@import "../../core/variables";
+
 .share {
-  border-top: 1px solid $white-two;
-  border-bottom: 1px solid $white-two;
-  margin: 0px 19px 30px 20px;
-  z-index: 10;
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    &:hover {
-      cursor: pointer;
-    }
-    &--container {
-      display: flex;
-      align-items: center;
-      .container-share {
-        font-size: 18px;
-        color: $dull-orange;
-        margin-right: 12px;
-      }
-      .container-text {
-        font-family: $font-generalTexts;
-        font-size: 18px;
-        font-weight: 600;
-        color: $reset-color;
-        text-transform: uppercase;
-      }
-    }
-    &--arrow {
-      color: $reset-color;
-      font-size: 18px;
-    }
-  }
   &__button {
     width: 199px;
     height: 50px;

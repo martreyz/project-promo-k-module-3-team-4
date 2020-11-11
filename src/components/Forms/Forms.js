@@ -10,13 +10,22 @@ class Forms extends React.Component {
   render() {
     return (
       <section className="main-aplication__section">
-        <Collapsable name="Diseña">
+        <Collapsable
+          name="Diseña"
+          icon="fas fa-object-ungroup container-collapsable"
+        >
           <Design />
         </Collapsable>
-        <Collapsable name="Rellena">
+        <Collapsable
+          name="Rellena"
+          icon="far fa-keyboard container-collapsable"
+        >
           <Fill />
         </Collapsable>
-        <Collapsable name="Comparte">
+        <Collapsable
+          name="Comparte"
+          icon="fas fa-share-alt container-collapsable"
+        >
           <Share />
         </Collapsable>
       </section>

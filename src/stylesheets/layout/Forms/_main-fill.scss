@@ -1,37 +1,5 @@
-@import '../../core/variables';
+@import "../../core/variables";
 .fill {
-  border-top: 1px solid $white-two;
-  margin: 0px 19px 30px 20px;
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0 5px 0;
-    &:hover {
-      cursor: pointer;
-    }
-    &--container {
-      display: flex;
-      align-items: center;
-      .keyboard {
-        font-size: 18px;
-        color: $dull-orange;
-        margin-right: 8px;
-      }
-      .container--text {
-        font-family: $font-generalTexts;
-        font-size: 18px;
-        font-weight: 600;
-        color: $reset-color;
-        text-transform: uppercase;
-      }
-    }
-    &--arrow {
-      color: $reset-color;
-      font-size: 18px;
-      z-index: 2;
-    }
-  }
   &__form {
     display: flex;
     flex-direction: column;

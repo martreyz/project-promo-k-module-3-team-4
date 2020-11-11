@@ -1,31 +1,52 @@
-.js-design__form {
+@import "../../core/variables";
+.js-collapsable__form {
   opacity: 0;
   overflow: hidden;
   height: 0px;
   transition: 0.5s linear;
-  //margin-bottom: -45px;
 }
 
 .js-fa-chevron-up {
   transform: rotate(180deg);
 }
 
-// .js-fill__form {
-//   // opacity: 0;
-//   overflow: hidden;
-//   height: 0px;
-//   // transition: 0.5s linear;
-//   margin-bottom: -30px;
-// }
-
-// .js-share__section {
-//   // opacity: 0;
-//   overflow: hidden;
-//   height: 0px;
-//   // transition: 0.5s linear;
-//   margin-bottom: -15px;
-// }
-
 .js-share {
   padding-bottom: 20px;
+}
+.collapsable {
+  border-bottom: 0.5px solid $white-two;
+  margin: 0px 20px;
+  @media all and (min-width: 768px) {
+    margin: 0px 30px 0px 40px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 7px 0px;
+    &:hover {
+      cursor: pointer;
+    }
+    &--container {
+      display: flex;
+      align-items: center;
+      .container-collapsable {
+        font-size: 18px;
+        color: $dull-orange;
+        margin-right: 12px;
+      }
+      .container-text {
+        font-family: $font-generalTexts;
+        font-size: 18px;
+        font-weight: 600;
+        color: $reset-color;
+        text-transform: uppercase;
+      }
+    }
+    &--arrow {
+      color: $reset-color;
+      font-size: 18px;
+    }
+  }
 }
