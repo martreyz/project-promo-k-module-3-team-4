@@ -1,5 +1,5 @@
-import React from "react";
-import "../stylesheets/layout/_main-preview.scss";
+import React from 'react';
+import '../stylesheets/layout/_main-preview.scss';
 
 class Preview extends React.Component {
   render() {
@@ -16,10 +16,10 @@ class Preview extends React.Component {
         <div className="preview__card js-preview__card">
           <div className="preview__card--text js-preview__card--text">
             <h3 className="text-name js__preview-name js-text-name">
-              {this.props.name}
+              {this.props.name || 'Sally Hill'}
             </h3>
             <h4 className="text-work js__preview-job js-text-work">
-              {this.props.job}
+              {this.props.job || 'Front-end unicorn'}
             </h4>
           </div>
           <div

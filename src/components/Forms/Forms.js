@@ -1,10 +1,10 @@
-import React from "react";
-import Design from "./Design";
-import Fill from "./Fill";
-import Share from "./Share";
-import "../../stylesheets/layout/Forms/_js-collapsables.scss";
-import "../../stylesheets/layout/Forms/_main-aplication.scss";
-import Collapsable from "./Collapsable";
+import React from 'react';
+import Design from './Design';
+import Fill from './Fill';
+import Share from './Share';
+import '../../stylesheets/layout/Forms/_js-collapsables.scss';
+import '../../stylesheets/layout/Forms/_main-aplication.scss';
+import Collapsable from './Collapsable';
 
 class Forms extends React.Component {
   render() {
@@ -14,13 +14,16 @@ class Forms extends React.Component {
           name="Diseña"
           icon="fas fa-object-ungroup container-collapsable"
         >
-          <Design />
+          <Design handleInputChange={this.props.handleInputChange} />
         </Collapsable>
         <Collapsable
           name="Rellena"
           icon="far fa-keyboard container-collapsable"
         >
-          <Fill />
+          <Fill
+            handleInputChange={this.props.handleInputChange}
+            name={this.props.name}
+          />
         </Collapsable>
         <Collapsable
           name="Comparte"

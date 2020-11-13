@@ -1,25 +1,32 @@
-import React from "react";
-import "../stylesheets/App.scss";
-import Header from "./Header";
-import Preview from "./Preview";
-import Forms from "./Forms/Forms";
-import Footer from "./Footer";
-import Photo from "../images/totoro.jpg";
-
-const data = {
-  name: "Ada Lovelace",
-  job: "Programadora",
-  photo: Photo,
-  phone: "666 66 66 66",
-  mail: "ada.lovelace@ada.com",
-  linkedin: "adita.lovelace",
-  github: "adita.lovelace",
-};
+import React from 'react';
+import '../stylesheets/App.scss';
+import Header from './Header';
+import Preview from './Preview';
+import Forms from './Forms/Forms';
+import Footer from './Footer';
+import Photo from '../images/totoro.jpg';
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor() {
+    super();
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.state = {
+      name: '',
+      job: '',
+      photo: Photo,
+      phone: '',
+      mail: '',
+      linkedin: '',
+      github: '',
+      palette: 1,
+    };
+  }
+
+  handleInputChange(name, value) {
+    this.setState({
+      [name]: value,
+    });
+  }
 
   render() {
     return (
@@ -27,15 +34,18 @@ class App extends React.Component {
         <Header />
         <main className="main-aplication">
           <Preview
-            name={data.name}
-            job={data.job}
-            photo={data.photo}
-            phone={data.phone}
-            linkedin={data.linkedin}
-            github={data.github}
-            mail={data.mail}
+            name={this.state.name}
+            job={this.state.job}
+            photo={this.state.photo}
+            phone={this.state.phone}
+            linkedin={this.state.linkedin}
+            github={this.state.github}
+            mail={this.state.mail}
           />
-          <Forms />
+          <Forms
+            handleInputChange={this.handleInputChange}
+            name={this.state.name}
+          />
         </main>
         <Footer />
       </>

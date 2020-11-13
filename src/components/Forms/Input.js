@@ -1,7 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Input extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(ev) {
+    const name = ev.currentTarget.name;
+    const value = ev.currentTarget.value;
+    this.props.handleInputChange(name, value);
+  }
+
   render() {
     return (
       <>
@@ -15,6 +26,8 @@ class Input extends React.Component {
           name={this.props.inputName}
           placeholder={this.props.inputPlaceholder}
           maxLength={this.props.inputMaxLenght}
+          value={this.props.name}
+          onChange={this.handleChange}
         />
       </>
     );
@@ -22,7 +35,7 @@ class Input extends React.Component {
 }
 
 Input.defaultProps = {
-  inputType: "text",
+  inputType: 'text',
 };
 
 Input.propTypes = {
