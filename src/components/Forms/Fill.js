@@ -16,7 +16,7 @@ class Fill extends React.Component {
           inputMaxLenght={20}
           classN="fill__form--input js__form js-input-name"
           handleInputChange={this.props.handleInputChange}
-          name={this.props.name}
+          value={this.props.name}
         />
         <Input
           htmlFor="work"
@@ -27,6 +27,7 @@ class Fill extends React.Component {
           inputMaxLenght={24}
           classN="fill__form--input js__form js-input-job"
           handleInputChange={this.props.handleInputChange}
+          value={this.props.job}
         />
         <label htmlFor="img" className="fill__form--label">
           Imagen de perfil
@@ -55,6 +56,7 @@ class Fill extends React.Component {
           inputPlaceholder="Ej: sally-hill@gmail.com"
           classN="fill__form--input js__form js-input-mail"
           handleInputChange={this.props.handleInputChange}
+          value={this.props.email}
         />
         <Input
           htmlFor="phone"
@@ -65,6 +67,7 @@ class Fill extends React.Component {
           inputPlaceholder="Ej: 555-55-55-55"
           classN="fill__form--input js__form js-input-phone"
           handleInputChange={this.props.handleInputChange}
+          value={this.props.phone}
         />
         <Input
           htmlFor="linkedin"
@@ -74,6 +77,7 @@ class Fill extends React.Component {
           inputPlaceholder="Ej: linkedin.com/in/sally.hill"
           classN="fill__form--input js__form js-input-linkedin"
           handleInputChange={this.props.handleInputChange}
+          value={this.props.linkedin}
         />
         <Input
           htmlFor="github"
@@ -83,6 +87,7 @@ class Fill extends React.Component {
           inputPlaceholder="Ej: @sally-hill"
           classN="fill__form--input js__form js-input-github"
           handleInputChange={this.props.handleInputChange}
+          value={this.props.github}
         />
       </form>
     );

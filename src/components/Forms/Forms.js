@@ -16,7 +16,7 @@ class Forms extends React.Component {
         >
           <Design
             handleRadioClick={this.props.handleRadioClick}
-            radio={this.props.radio}
+            palette={this.props.palette}
           />
         </Collapsable>
         <Collapsable
@@ -26,6 +26,12 @@ class Forms extends React.Component {
           <Fill
             handleInputChange={this.props.handleInputChange}
             name={this.props.name}
+            job={this.props.job}
+            photo={this.props.photo}
+            phone={this.props.phone}
+            linkedin={this.props.linkedin}
+            github={this.props.github}
+            mail={this.props.mail}
           />
         </Collapsable>
         <Collapsable

@@ -16,7 +16,6 @@ class Preview extends React.Component {
     } else if (this.props.palette === 3) {
       this.classPalette = 'js-paletteMedium';
     }
-    console.log(this.classPalette);
   }
 
   render() {

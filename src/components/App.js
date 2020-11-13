@@ -64,7 +64,13 @@ class App extends React.Component {
             handleInputChange={this.handleInputChange}
             handleRadioClick={this.handleRadioClick}
             name={this.state.name}
-            radio={this.state.palette}
+            job={this.state.job}
+            photo={this.state.photo}
+            phone={this.state.phone}
+            linkedin={this.state.linkedin}
+            github={this.state.github}
+            mail={this.state.mail}
+            palette={this.state.palette}
           />
         </main>
         <Footer />

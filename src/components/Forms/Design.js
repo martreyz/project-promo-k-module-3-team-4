@@ -4,10 +4,10 @@ import '../../stylesheets/layout/Forms/_main-design.scss';
 class Design extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleClick(ev) {
+  handleChange(ev) {
     const value = ev.currentTarget.value;
     this.props.handleRadioClick(value);
   }
@@ -23,8 +23,8 @@ class Design extends React.Component {
               id="cold"
               name="palette"
               value="cold"
-              onClick={this.handleClick}
-              checked={this.props.radio === 1 ? true : false}
+              onChange={this.handleChange}
+              checked={this.props.palette === 1 ? true : false}
               className="js-inputCold"
             />
             <div className="palette-cold">
@@ -43,8 +43,8 @@ class Design extends React.Component {
               name="palette"
               value="warm"
               className="js-inputWarm"
-              onClick={this.handleClick}
-              checked={this.props.radio === 2 ? true : false}
+              onChange={this.handleChange}
+              checked={this.props.palette === 2 ? true : false}
             />
             <div className="palette-warm">
               <span className="a js-paletteWarmA"></span>
@@ -62,8 +62,8 @@ class Design extends React.Component {
               name="palette"
               value="medium"
               className="js-inputMedium"
-              onClick={this.handleClick}
-              checked={this.props.radio === 3 ? true : false}
+              onChange={this.handleChange}
+              checked={this.props.palette === 3 ? true : false}
             />
             <div className="palette-medium">
               <span className="a js-palette-mediumA"></span>

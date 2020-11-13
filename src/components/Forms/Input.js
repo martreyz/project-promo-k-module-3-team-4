@@ -26,7 +26,7 @@ class Input extends React.Component {
           name={this.props.inputName}
           placeholder={this.props.inputPlaceholder}
           maxLength={this.props.inputMaxLenght}
-          value={this.props.name}
+          value={this.props.value}
           onChange={this.handleChange}
         />
       </>
@@ -45,7 +45,7 @@ Input.propTypes = {
   inputID: PropTypes.string.isRequired,
   inputName: PropTypes.string.isRequired,
   inputPlaceholder: PropTypes.string.isRequired,
-  inputMaxLenght: PropTypes.number.isRequired,
+  inputMaxLenght: PropTypes.number,
   classN: PropTypes.string.isRequired,
 };
 
