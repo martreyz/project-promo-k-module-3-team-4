@@ -1,5 +1,5 @@
-import React from "react";
-import "../../stylesheets/layout/Forms/_js-collapsables.scss";
+import React from 'react';
+import '../../stylesheets/layout/Forms/_js-collapsables.scss';
 
 class Collapsable extends React.Component {
   constructor(props) {
@@ -9,17 +9,17 @@ class Collapsable extends React.Component {
       isClosed: true,
     };
   }
+
   handleClick() {
     this.setState({
       isClosed: !this.state.isClosed,
     });
-    console.log(this.state.isClosed);
   }
+
   render() {
-    const openClassName = this.state.isClosed ? "js-collapsable__form" : "";
-    const arrowClassName = this.state.isClosed ? "js-fa-chevron-up" : "";
+    const openClassName = this.state.isClosed ? 'js-collapsable__form' : '';
+    const arrowClassName = this.state.isClosed ? 'js-fa-chevron-up' : '';
     return (
-      //"share js-share"
       <section className="collapsable">
         <div
           className="collapsable__title js-collapsable-title"

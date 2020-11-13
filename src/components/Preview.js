@@ -2,9 +2,26 @@ import React from 'react';
 import '../stylesheets/layout/_main-preview.scss';
 
 class Preview extends React.Component {
-  render() {
-    const pic = this.props.photo;
+  constructor(props) {
+    super(props);
+    this.changePalette = this.changePalette.bind(this);
+    this.classPalette = '';
+  }
 
+  changePalette() {
+    if (this.props.palette === 1) {
+      this.classPalette = 'js-paletteCold';
+    } else if (this.props.palette === 2) {
+      this.classPalette = 'js-paletteWarm';
+    } else if (this.props.palette === 3) {
+      this.classPalette = 'js-paletteMedium';
+    }
+    console.log(this.classPalette);
+  }
+
+  render() {
+    this.changePalette();
+    const pic = this.props.photo;
     return (
       <section className="preview">
         <div className="preview-button-div">
@@ -13,7 +30,7 @@ class Preview extends React.Component {
             <p className="preview__button--text">Reset</p>
           </button>
         </div>
-        <div className="preview__card js-preview__card">
+        <div className={'preview__card js-preview__card ' + this.classPalette}>
           <div className="preview__card--text js-preview__card--text">
             <h3 className="text-name js__preview-name js-text-name">
               {this.props.name || 'Sally Hill'}

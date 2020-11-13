@@ -14,7 +14,10 @@ class Forms extends React.Component {
           name="Diseña"
           icon="fas fa-object-ungroup container-collapsable"
         >
-          <Design handleInputChange={this.props.handleInputChange} />
+          <Design
+            handleRadioClick={this.props.handleRadioClick}
+            radio={this.props.radio}
+          />
         </Collapsable>
         <Collapsable
           name="Rellena"

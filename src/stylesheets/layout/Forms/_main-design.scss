@@ -1,4 +1,4 @@
-@import "../../core/variables";
+@import '../../core/variables';
 .design {
   &__form {
     display: flex;
@@ -17,7 +17,6 @@
   }
 }
 
-//----------
 .uppercase {
   text-transform: uppercase;
 }
@@ -68,6 +67,7 @@
 .palette-cold .b {
   background-color: $dirty-blue;
 }
+
 .palette-cold .c {
   background-color: $border-links-color;
 }

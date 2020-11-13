@@ -4,15 +4,6 @@ import '../../stylesheets/layout/Forms/_main-share.scss';
 class Share extends React.Component {
   render() {
     return (
-      /*  <section className="share js-share">
-         <div className="share__title js-collapsable-title">
-           <div className="share__title--container">
-             <i className="fas fa-share-alt container-share"></i>
-             <h2 className="container-text">Comparte</h2>
-           </div>
-           <i className="fas fa-chevron-up js-fa-chevron-up share__title--arrow"></i>
-         </div>
-       */
       <div className="share__section js-share__section">
         <button className="share__button js__btn" disabled>
           <i className="far fa-address-card share__button--icon"></i>
@@ -27,7 +18,6 @@ class Share extends React.Component {
           </a>
         </div>
       </div>
-      /* </section> */
     );
   }
 }

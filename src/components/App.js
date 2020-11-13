@@ -10,6 +10,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleRadioClick = this.handleRadioClick.bind(this);
     this.state = {
       name: '',
       job: '',
@@ -28,6 +29,22 @@ class App extends React.Component {
     });
   }
 
+  handleRadioClick(value) {
+    if (value === 'cold') {
+      this.setState({
+        palette: 1,
+      });
+    } else if (value === 'warm') {
+      this.setState({
+        palette: 2,
+      });
+    } else if (value === 'medium') {
+      this.setState({
+        palette: 3,
+      });
+    }
+  }
+
   render() {
     return (
       <>
@@ -41,10 +58,13 @@ class App extends React.Component {
             linkedin={this.state.linkedin}
             github={this.state.github}
             mail={this.state.mail}
+            palette={this.state.palette}
           />
           <Forms
             handleInputChange={this.handleInputChange}
+            handleRadioClick={this.handleRadioClick}
             name={this.state.name}
+            radio={this.state.palette}
           />
         </main>
         <Footer />
