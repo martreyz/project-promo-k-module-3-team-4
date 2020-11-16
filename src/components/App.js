@@ -11,6 +11,8 @@ class App extends React.Component {
     super();
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleRadioClick = this.handleRadioClick.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+
     this.state = {
       name: '',
       job: '',
@@ -45,12 +47,26 @@ class App extends React.Component {
     }
   }
 
+  handleReset() {
+    this.setState({
+      name: '',
+      job: '',
+      photo: Photo,
+      phone: '',
+      mail: '',
+      linkedin: '',
+      github: '',
+      palette: 1,
+    });
+  }
+
   render() {
     return (
       <>
         <Header />
         <main className="main-aplication">
           <Preview
+            handleReset={this.handleReset}
             name={this.state.name}
             job={this.state.job}
             photo={this.state.photo}

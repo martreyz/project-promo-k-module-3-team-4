@@ -1,4 +1,5 @@
 import React from 'react';
+import Reset from './Reset';
 import '../stylesheets/layout/_main-preview.scss';
 
 class Preview extends React.Component {
@@ -24,10 +25,7 @@ class Preview extends React.Component {
     return (
       <section className="preview">
         <div className="preview-button-div">
-          <button className="preview__button js__btn-reset">
-            <i className="far fa-trash-alt preview__button--trash"></i>
-            <p className="preview__button--text">Reset</p>
-          </button>
+          <Reset handleReset={this.props.handleReset}></Reset>
         </div>
         <div className={'preview__card js-preview__card ' + this.classPalette}>
           <div className="preview__card--text js-preview__card--text">

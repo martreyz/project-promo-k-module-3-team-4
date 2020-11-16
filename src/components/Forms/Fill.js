@@ -33,10 +33,7 @@ class Fill extends React.Component {
           Imagen de perfil
         </label>
         <div className="action">
-          <button
-            className="action__upload-btn js__profile-trigger"
-            type="button"
-          >
+          <button className="action__upload-btn js__profile-trigger" type="button">
             Añadir imagen
           </button>
           <input
@@ -48,15 +45,15 @@ class Fill extends React.Component {
           <div className="profile__preview js__profile-preview"></div>
         </div>
         <Input
-          htmlFor="email"
+          htmlFor="mail"
           labelTitle="Email"
           inputType="email"
-          inputID="email"
-          inputName="email"
+          inputID="mail"
+          inputName="mail"
           inputPlaceholder="Ej: sally-hill@gmail.com"
           classN="fill__form--input js__form js-input-mail"
           handleInputChange={this.props.handleInputChange}
-          value={this.props.email}
+          value={this.props.mail}
         />
         <Input
           htmlFor="phone"
