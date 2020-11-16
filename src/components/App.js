@@ -12,7 +12,8 @@ class App extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleRadioClick = this.handleRadioClick.bind(this);
     this.handleReset = this.handleReset.bind(this);
-
+    this.setLocalStorage = this.setLocalStorage.bind(this);
+    this.getLocalStorage = this.getLocalStorage.bind(this);
     this.state = {
       name: '',
       job: '',
@@ -29,6 +30,7 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     });
+    this.setLocalStorage();
   }
 
   handleRadioClick(value) {
@@ -45,6 +47,7 @@ class App extends React.Component {
         palette: 3,
       });
     }
+    this.setLocalStorage();
   }
 
   handleReset() {
@@ -58,8 +61,25 @@ class App extends React.Component {
       github: '',
       palette: 1,
     });
+    this.setLocalStorage();
+  }
+  setLocalStorage() {
+    localStorage.setItem('data', JSON.stringify(this.state));
   }
 
+  getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem('data'));
+    this.setState({
+      name: data.name,
+      job: data.job,
+      photo: data.photo,
+      phone: data.phone,
+      mail: data.mail,
+      linkedin: data.linkedin,
+      github: data.github,
+      palette: data.palette,
+    });
+  }
   render() {
     return (
       <>
