@@ -1,10 +1,10 @@
-import React from 'react';
-import Design from './Design';
-import Fill from './Fill';
-import Share from './Share';
-import '../../stylesheets/layout/Forms/_js-collapsables.scss';
-import '../../stylesheets/layout/Forms/_main-aplication.scss';
-import Collapsable from './Collapsable';
+import React from "react";
+import Design from "./Design";
+import Fill from "./Fill";
+import Share from "./Share";
+import "../../stylesheets/layout/Forms/_js-collapsables.scss";
+import "../../stylesheets/layout/Forms/_main-aplication.scss";
+import Collapsable from "./Collapsable";
 
 class Forms extends React.Component {
   render() {
@@ -32,6 +32,7 @@ class Forms extends React.Component {
             linkedin={this.props.linkedin}
             github={this.props.github}
             mail={this.props.mail}
+            photoMin={this.props.photoMin}
           />
         </Collapsable>
         <Collapsable

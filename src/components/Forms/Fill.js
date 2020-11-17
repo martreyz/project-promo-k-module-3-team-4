@@ -1,9 +1,33 @@
-import React from 'react';
-import '../../stylesheets/layout/Forms/_avatar.scss';
-import '../../stylesheets/layout/Forms/_main-fill.scss';
-import Input from './Input';
+import React from "react";
+import "../../stylesheets/layout/Forms/_avatar.scss";
+import "../../stylesheets/layout/Forms/_main-fill.scss";
+import Input from "./Input";
 
+const fr = new FileReader();
 class Fill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.fileInput = React.createRef();
+    this.handleFileChange = this.handleFileChange.bind(this);
+    this.writeImage = this.writeImage.bind(this);
+    this.fakeClick = this.fakeClick.bind(this);
+  }
+
+  writeImage() {
+    const fileUrl = fr.result;
+    this.props.handleInputChange("photo", fileUrl);
+  }
+
+  handleFileChange() {
+    const file = this.fileInput.current.files[0];
+    fr.onload = this.writeImage;
+    fr.readAsDataURL(file);
+  }
+
+  fakeClick() {
+    this.fileInput.current.click();
+  }
+
   render() {
     return (
       <form className="fill__form js-fill__form" action="" method="post">
@@ -33,16 +57,25 @@ class Fill extends React.Component {
           Imagen de perfil
         </label>
         <div className="action">
-          <button className="action__upload-btn js__profile-trigger" type="button">
+          <button
+            className="action__upload-btn js__profile-trigger"
+            type="button"
+            onClick={this.fakeClick}
+          >
             Añadir imagen
           </button>
           <input
+            onChange={this.handleFileChange}
+            ref={this.fileInput}
             type="file"
             name=""
             id="img-selector"
             className="action__hiddenField js__profile-upload-btn"
           />
-          <div className="profile__preview js__profile-preview"></div>
+          <div
+            className="profile__preview js__profile-preview"
+            style={{ backgroundImage: `url(${this.props.photoMin})` }}
+          ></div>
         </div>
         <Input
           htmlFor="mail"

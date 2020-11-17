@@ -1,10 +1,10 @@
-import React from 'react';
-import '../stylesheets/App.scss';
-import Header from './Header';
-import Preview from './Preview';
-import Forms from './Forms/Forms';
-import Footer from './Footer';
-import Photo from '../images/totoro.jpg';
+import React from "react";
+import "../stylesheets/App.scss";
+import Header from "./Header";
+import Preview from "./Preview";
+import Forms from "./Forms/Forms";
+import Footer from "./Footer";
+import Photo from "../images/totoro.jpg";
 
 class App extends React.Component {
   constructor() {
@@ -15,14 +15,15 @@ class App extends React.Component {
     this.setLocalStorage = this.setLocalStorage.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
     this.state = {
-      name: '',
-      job: '',
+      name: "",
+      job: "",
       photo: Photo,
-      phone: '',
-      mail: '',
-      linkedin: '',
-      github: '',
+      phone: "",
+      mail: "",
+      linkedin: "",
+      github: "",
       palette: 1,
+      photoMin: "",
     };
   }
 
@@ -30,19 +31,24 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     });
+    if (name === "photo") {
+      this.setState({
+        photoMin: value,
+      });
+    }
     this.setLocalStorage();
   }
 
   handleRadioClick(value) {
-    if (value === 'cold') {
+    if (value === "cold") {
       this.setState({
         palette: 1,
       });
-    } else if (value === 'warm') {
+    } else if (value === "warm") {
       this.setState({
         palette: 2,
       });
-    } else if (value === 'medium') {
+    } else if (value === "medium") {
       this.setState({
         palette: 3,
       });
@@ -52,23 +58,24 @@ class App extends React.Component {
 
   handleReset() {
     this.setState({
-      name: '',
-      job: '',
+      name: "",
+      job: "",
       photo: Photo,
-      phone: '',
-      mail: '',
-      linkedin: '',
-      github: '',
+      phone: "",
+      mail: "",
+      linkedin: "",
+      github: "",
       palette: 1,
+      photoMin: "",
     });
     this.setLocalStorage();
   }
   setLocalStorage() {
-    localStorage.setItem('data', JSON.stringify(this.state));
+    localStorage.setItem("data", JSON.stringify(this.state));
   }
 
   getLocalStorage() {
-    const data = JSON.parse(localStorage.getItem('data'));
+    const data = JSON.parse(localStorage.getItem("data"));
     this.setState({
       name: data.name,
       job: data.job,
@@ -107,6 +114,7 @@ class App extends React.Component {
             github={this.state.github}
             mail={this.state.mail}
             palette={this.state.palette}
+            photoMin={this.state.photoMin}
           />
         </main>
         <Footer />
