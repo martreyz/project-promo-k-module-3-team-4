@@ -1,10 +1,11 @@
 import React from "react";
 import "../stylesheets/App.scss";
 import Header from "./Header";
-import Preview from "./Preview";
-import Forms from "./Forms/Forms";
 import Footer from "./Footer";
 import Photo from "../images/totoro.jpg";
+import Card from "./Card";
+import { Switch, Route } from "react-router-dom";
+import Landing from "./Landing";
 
 class App extends React.Component {
   constructor() {
@@ -92,30 +93,26 @@ class App extends React.Component {
       <>
         <Header />
         <main className="main-aplication">
-          <Preview
-            handleReset={this.handleReset}
-            name={this.state.name}
-            job={this.state.job}
-            photo={this.state.photo}
-            phone={this.state.phone}
-            linkedin={this.state.linkedin}
-            github={this.state.github}
-            mail={this.state.mail}
-            palette={this.state.palette}
-          />
-          <Forms
-            handleInputChange={this.handleInputChange}
-            handleRadioClick={this.handleRadioClick}
-            name={this.state.name}
-            job={this.state.job}
-            photo={this.state.photo}
-            phone={this.state.phone}
-            linkedin={this.state.linkedin}
-            github={this.state.github}
-            mail={this.state.mail}
-            palette={this.state.palette}
-            photoMin={this.state.photoMin}
-          />
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route path="/card">
+              <Card
+                handleReset={this.handleReset}
+                name={this.state.name}
+                job={this.state.job}
+                photo={this.state.photo}
+                phone={this.state.phone}
+                linkedin={this.state.linkedin}
+                github={this.state.github}
+                mail={this.state.mail}
+                palette={this.state.palette}
+                handleInputChange={this.handleInputChange}
+                handleRadioClick={this.handleRadioClick}
+                photoMin={this.state.photoMin}
+              />
+            </Route>
+          </Switch>
+
         </main>
         <Footer />
       </>
