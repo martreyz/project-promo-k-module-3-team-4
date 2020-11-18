@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../stylesheets/layout/_main-landing.scss";
+import logo from "../images/logo-awesome-profile-cards.svg";
 
 class Landing extends React.Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class Landing extends React.Component {
       <main class="main">
         <img
           class="main__logo"
-          src="./assets/images/logo-awesome-profile-cards.svg"
+          src={logo}
           alt="Logo de la página"
           title="Logo de la página"
         />

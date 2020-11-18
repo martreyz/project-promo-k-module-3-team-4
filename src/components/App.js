@@ -92,28 +92,28 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <main className="main-aplication">
-          <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route path="/card">
-              <Card
-                handleReset={this.handleReset}
-                name={this.state.name}
-                job={this.state.job}
-                photo={this.state.photo}
-                phone={this.state.phone}
-                linkedin={this.state.linkedin}
-                github={this.state.github}
-                mail={this.state.mail}
-                palette={this.state.palette}
-                handleInputChange={this.handleInputChange}
-                handleRadioClick={this.handleRadioClick}
-                photoMin={this.state.photoMin}
-              />
-            </Route>
-          </Switch>
 
-        </main>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/card">
+            <Card
+              handleReset={this.handleReset}
+              name={this.state.name}
+              job={this.state.job}
+              photo={this.state.photo}
+              phone={this.state.phone}
+              linkedin={this.state.linkedin}
+              github={this.state.github}
+              mail={this.state.mail}
+              palette={this.state.palette}
+              handleInputChange={this.handleInputChange}
+              handleRadioClick={this.handleRadioClick}
+              photoMin={this.state.photoMin}
+            />
+          </Route>
+        </Switch>
+
+
         <Footer />
       </>
     );

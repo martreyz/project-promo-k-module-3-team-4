@@ -9,7 +9,7 @@ class Card extends React.Component {
   }
   render() {
     return (
-      <>
+      <main className="main-aplication">
         <Preview
           handleReset={this.props.handleReset}
           name={this.props.name}
@@ -34,7 +34,7 @@ class Card extends React.Component {
           palette={this.props.palette}
           photoMin={this.props.photoMin}
         />
-      </>
+      </main>
     )
   }
 }
