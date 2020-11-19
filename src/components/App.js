@@ -1,11 +1,11 @@
-import React from "react";
-import "../stylesheets/App.scss";
-import Header from "./Header";
-import Footer from "./Footer";
-import Photo from "../images/totoro.jpg";
-import Card from "./Card";
-import { Switch, Route } from "react-router-dom";
-import Landing from "./Landing";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Header from './Header';
+import Landing from './Landing';
+import Card from './Card';
+import Footer from './Footer';
+import photo from '../images/totoro.jpg';
+import '../stylesheets/App.scss';
 
 class App extends React.Component {
   constructor() {
@@ -16,15 +16,15 @@ class App extends React.Component {
     this.setLocalStorage = this.setLocalStorage.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
     this.state = {
-      name: "",
-      job: "",
-      photo: Photo,
-      phone: "",
-      mail: "",
-      linkedin: "",
-      github: "",
+      name: '',
+      job: '',
+      photo: photo,
+      phone: '',
+      mail: '',
+      linkedin: '',
+      github: '',
       palette: 1,
-      photoMin: "",
+      photoMin: '',
     };
   }
 
@@ -32,7 +32,7 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     });
-    if (name === "photo") {
+    if (name === 'photo') {
       this.setState({
         photoMin: value,
       });
@@ -40,15 +40,15 @@ class App extends React.Component {
   }
 
   handleRadioClick(value) {
-    if (value === "cold") {
+    if (value === 'cold') {
       this.setState({
         palette: 1,
       });
-    } else if (value === "warm") {
+    } else if (value === 'warm') {
       this.setState({
         palette: 2,
       });
-    } else if (value === "medium") {
+    } else if (value === 'medium') {
       this.setState({
         palette: 3,
       });
@@ -57,35 +57,34 @@ class App extends React.Component {
 
   handleReset() {
     this.setState({
-      name: "",
-      job: "",
-      photo: Photo,
-      phone: "",
-      mail: "",
-      linkedin: "",
-      github: "",
+      name: '',
+      job: '',
+      photo: photo,
+      phone: '',
+      mail: '',
+      linkedin: '',
+      github: '',
       palette: 1,
-      photoMin: "",
+      photoMin: '',
     });
   }
 
   componentDidMount() {
-    if (localStorage.getItem("data")) {
-      this.getLocalStorage("data");
+    if (localStorage.getItem('data')) {
+      this.getLocalStorage('data');
     }
   }
 
   componentDidUpdate() {
     this.setLocalStorage();
-    // localStorage.setItem("data", JSON.stringify(this.state));
   }
 
   setLocalStorage() {
-    localStorage.setItem("data", JSON.stringify(this.state));
+    localStorage.setItem('data', JSON.stringify(this.state));
   }
 
   getLocalStorage() {
-    const data = JSON.parse(localStorage.getItem("data"));
+    const data = JSON.parse(localStorage.getItem('data'));
     this.setState({
       name: data.name,
       job: data.job,
@@ -102,7 +101,6 @@ class App extends React.Component {
     return (
       <>
         <Header />
-
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/card">
@@ -122,7 +120,6 @@ class App extends React.Component {
             />
           </Route>
         </Switch>
-
         <Footer />
       </>
     );

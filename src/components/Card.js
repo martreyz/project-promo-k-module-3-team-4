@@ -1,12 +1,8 @@
-import React from "react";
-import Preview from "./Preview";
-import Forms from "./Forms/Forms";
-
+import React from 'react';
+import Preview from './Preview';
+import Forms from './Forms/Forms';
 
 class Card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <main className="main-aplication">
@@ -35,7 +31,8 @@ class Card extends React.Component {
           photoMin={this.props.photoMin}
         />
       </main>
-    )
+    );
   }
 }
+
 export default Card;

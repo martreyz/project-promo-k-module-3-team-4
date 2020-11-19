@@ -1,6 +1,6 @@
-import React from "react";
-import "../../stylesheets/layout/Forms/_main-design.scss";
-import Palette from "./Palette";
+import React from 'react';
+import Palette from './Palette';
+import '../../stylesheets/layout/Forms/Design.scss';
 
 class Design extends React.Component {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Reset from './Reset';
-import '../stylesheets/layout/_main-preview.scss';
+import '../stylesheets/layout/Preview.scss';
 
 class Preview extends React.Component {
   constructor(props) {

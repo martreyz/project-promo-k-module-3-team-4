@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../stylesheets/layout/Forms/_main-share.scss';
+import '../../stylesheets/layout/Forms/Share.scss';
 
 class Share extends React.Component {
   render() {

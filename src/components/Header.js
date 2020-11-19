@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "../images/logo-awesome-profile-cards.svg";
-import "../stylesheets/layout/_header.scss";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../images/logo-awesome-profile-cards.svg';
+import '../stylesheets/layout/Header.scss';
 
 class Header extends React.Component {
   render() {

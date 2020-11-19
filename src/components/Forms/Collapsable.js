@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../stylesheets/layout/Forms/_js-collapsables.scss';
+import '../../stylesheets/layout/Forms/Collapsable.scss';
 
 class Collapsable extends React.Component {
   constructor(props) {

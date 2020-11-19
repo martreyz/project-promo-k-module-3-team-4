@@ -1,4 +1,4 @@
-@import "../../core/variables";
+@import '../../core/variables';
 
 .share {
   &__button {
@@ -14,7 +14,6 @@
     align-items: center;
     margin: 30px auto 30px auto;
     z-index: 20;
-
     &--icon {
       font-size: 22px;
     }
@@ -27,7 +26,6 @@
     }
   }
   &__finish {
-    // border-bottom: 1px solid $white-two;
     border-top: 1px solid $white-two;
     padding: 20px 0 30px 0;
     display: flex;
@@ -70,20 +68,19 @@
       }
     }
   }
+
   .js-button-create {
     background-color: $dull-orange;
     &:hover {
       cursor: pointer;
     }
   }
-  // .js__finish-hidden {
-  //   display: none;
-  // }
 
   .card-link {
     text-decoration: none;
     color: $dull-orange;
   }
+
   .paragraph {
     font-family: $font-generalTexts;
   }

@@ -1,10 +1,110 @@
-//core
-@import "core/reset";
-@import "core/variables";
+@import '../core/variables';
 
-//layout
-@import "layout/main-landing";
-@import "layout/footer";
-@import "layout/footer-landing";
+.body {
+  height: 100vh;
+}
 
+.main {
+  height: 100%;
+  background-color: $lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  @media all and (min-width: 768px) {
+    justify-content: center;
+    padding-top: 0;
+  }
+  &__logo {
+    width: 250px;
+    height: 63px;
+    margin-top: 95px;
+    object-fit: contain;
+    @media all and (min-width: 768px) {
+      height: 105px;
+      width: 419px;
+    }
+  }
+  &__title {
+    color: $dull-orange;
+    font-family: $font-titleMain;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 35.4px;
+    @media all and (min-width: 768px) {
+      margin-top: 31px;
+      font-size: 24px;
+    }
+  }
+  &__text {
+    width: 265px;
+    font-family: $font-generalTexts;
+    font-size: 13px;
+    text-align: center;
+    width: 265px;
+    @media all and (min-width: 768px) {
+      width: 331px;
+      font-size: 16px;
+      width: 331px;
+    }
+  }
+  &__icons {
+    border: 1.6px solid rgba(225, 115, 52, 0.21);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 268px;
+    height: 73.8px;
+    margin-top: 17.8px;
+    @media all and (min-width: 768px) {
+      margin-top: 27px;
+    }
+    &__item {
+      text-align: center;
+      &__logo {
+        font-size: 22.4px;
+        color: $dull-orange;
+        @media all and (min-width: 768px) {
+          font-size: 28px;
+        }
+      }
+      &__text {
+        color: $gunmetal;
+        font-family: $font-generalTexts;
+        font-size: 12.8px;
+        @media all and (min-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &__button {
+    font-family: $font-generalTexts;
+    font-size: 16px;
+    font-weight: 600;
+    height: 42px;
+    width: 129px;
+    border-radius: 21px;
+    border: none;
+    background-color: $dirty-blue;
+    text-align: center;
+    line-height: 42px;
+    margin-bottom: 30px;
+    color: $white;
+    margin-top: 38.6px;
+    cursor: pointer;
+    @media all and (min-width: 720px) {
+      margin-top: 186px;
+      margin-bottom: 60px;
+    }
+  }
+}
 
+.links {
+  text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

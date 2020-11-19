@@ -1,5 +1,5 @@
-import React from "react";
-import "../../stylesheets/layout/Forms/_main-design.scss";
+import React from 'react';
+import '../../stylesheets/layout/Forms/Design.scss';
 
 class Palette extends React.Component {
   constructor(props) {

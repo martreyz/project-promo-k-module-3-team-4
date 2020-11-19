@@ -1,4 +1,5 @@
-@import "../core/variables";
+@import '../core/variables';
+
 .footer {
   border-top: 1px solid $white-two;
   width: 100%;
@@ -9,13 +10,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 18px 0 20px 0;
-
   @media all and (min-width: 768px) {
     height: 60px;
     flex-direction: row;
     padding: 10px 40px 10px 41px;
   }
-
   &__copy {
     opacity: 0.5;
     font-family: $font-generalTexts;
@@ -27,7 +26,6 @@
     margin-top: 12px;
     height: 40px;
     object-fit: contain;
-
     @media all and (min-width: 768px) {
       margin-top: 0;
     }

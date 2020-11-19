@@ -1,7 +1,7 @@
-import React from "react";
-import "../../stylesheets/layout/Forms/_avatar.scss";
-import "../../stylesheets/layout/Forms/_main-fill.scss";
-import Input from "./Input";
+import React from 'react';
+import Input from './Input';
+import '../../stylesheets/layout/Forms/Fill-avatar.scss';
+import '../../stylesheets/layout/Forms/Fill-main.scss';
 
 const fr = new FileReader();
 class Fill extends React.Component {
@@ -15,7 +15,7 @@ class Fill extends React.Component {
 
   writeImage() {
     const fileUrl = fr.result;
-    this.props.handleInputChange("photo", fileUrl);
+    this.props.handleInputChange('photo', fileUrl);
   }
 
   handleFileChange() {
