@@ -4,23 +4,20 @@
 }
 .main {
   height: 100%; //Damos altura en vh para poder dar porcentajes dentro
-  border-bottom: 1px solid $white-two;
   background-color: $lightgrey;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 95px;
-  // padding: 95px 27.2px 30px 28px;
   @media all and (min-width: 768px) {
     justify-content: center;
     padding-top: 0;
-    // padding: 350px 175px 59px 175px;
   }
 
   &__logo {
     width: 250px;
     height: 63px;
+    margin-top: 95px;
     object-fit: contain;
     @media all and (min-width: 768px) {
       height: 105px;
@@ -92,15 +89,17 @@
     height: 42px;
     width: 129px;
     border-radius: 21px;
+    border: none;
     background-color: $dirty-blue;
     text-align: center;
     line-height: 42px;
-    margin-top: 38.6px;
     margin-bottom: 30px;
     color: $white;
     margin-top: 38.6px;
-    @media all and (min-height: 720px) {
+    cursor: pointer;
+    @media all and (min-width: 720px) {
       margin-top: 186px;
+      margin-bottom: 60px;
     }
   }
 }
