@@ -37,7 +37,6 @@ class App extends React.Component {
         photoMin: value,
       });
     }
-    this.setLocalStorage();
   }
 
   handleRadioClick(value) {
@@ -54,7 +53,6 @@ class App extends React.Component {
         palette: 3,
       });
     }
-    this.setLocalStorage();
   }
 
   handleReset() {
@@ -69,8 +67,19 @@ class App extends React.Component {
       palette: 1,
       photoMin: "",
     });
-    this.setLocalStorage();
   }
+
+  componentDidMount() {
+    if (localStorage.getItem("data")) {
+      this.getLocalStorage("data");
+    }
+  }
+
+  componentDidUpdate() {
+    this.setLocalStorage();
+    // localStorage.setItem("data", JSON.stringify(this.state));
+  }
+
   setLocalStorage() {
     localStorage.setItem("data", JSON.stringify(this.state));
   }
@@ -88,6 +97,7 @@ class App extends React.Component {
       palette: data.palette,
     });
   }
+
   render() {
     return (
       <>
@@ -112,7 +122,6 @@ class App extends React.Component {
             />
           </Route>
         </Switch>
-
 
         <Footer />
       </>
