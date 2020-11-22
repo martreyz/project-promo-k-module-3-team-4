@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
-import Landing from './Landing';
+import Landing from './Homepage';
 import Card from './Card';
 import Footer from './Footer';
 import photo from '../images/totoro.jpg';
