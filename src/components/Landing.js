@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo-awesome-profile-cards.svg';
-import '../stylesheets/layout/Landing.scss';
+import '../stylesheets/layout/Homepage.scss';
 
 class Landing extends React.Component {
   render() {
