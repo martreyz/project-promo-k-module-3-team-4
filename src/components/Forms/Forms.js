@@ -39,7 +39,7 @@ class Forms extends React.Component {
           name="Comparte"
           icon="fas fa-share-alt container-collapsable"
         >
-          <Share />
+          <Share handleShareClick={this.props.handleShareClick} />
         </Collapsable>
       </section>
     );

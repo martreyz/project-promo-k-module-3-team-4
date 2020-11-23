@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { sendRequest } from '../services/api';
 import Header from './Header';
 import Landing from './Homepage';
 import Card from './Card';
@@ -15,6 +16,7 @@ class App extends React.Component {
     this.handleReset = this.handleReset.bind(this);
     this.setLocalStorage = this.setLocalStorage.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
+    this.handleShareClick = this.handleShareClick.bind(this);
     this.state = {
       name: '',
       job: '',
@@ -25,6 +27,7 @@ class App extends React.Component {
       github: '',
       palette: 1,
       photoMin: '',
+      data: {},
     };
   }
 
@@ -55,6 +58,22 @@ class App extends React.Component {
     }
   }
 
+  handleShareClick() {
+    const data = {
+      name: this.state.name,
+      job: this.state.job,
+      photo: this.state.photo,
+      phone: this.state.phone,
+      mail: this.state.mail,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+      palette: this.state.palette,
+    };
+    this.setState({
+      data: data,
+    });
+  }
+
   handleReset() {
     this.setState({
       name: '',
@@ -77,6 +96,12 @@ class App extends React.Component {
 
   componentDidUpdate() {
     this.setLocalStorage();
+    if (JSON.stringify(this.state.data) !== '{}') {
+      console.log('me paso el if por donde os parezca');
+      sendRequest(this.state.data !== {}).then((result) => {
+        console.log(result);
+      });
+    }
   }
 
   setLocalStorage() {
@@ -116,6 +141,7 @@ class App extends React.Component {
               palette={this.state.palette}
               handleInputChange={this.handleInputChange}
               handleRadioClick={this.handleRadioClick}
+              handleShareClick={this.handleShareClick}
               photoMin={this.state.photoMin}
             />
           </Route>

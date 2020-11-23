@@ -2,10 +2,23 @@ import React from 'react';
 import '../../stylesheets/layout/Forms/Share.scss';
 
 class Share extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.props.handleShareClick();
+  }
+
   render() {
     return (
       <div className="share__section js-share__section">
-        <button className="share__button js__btn" disabled>
+        <button
+          className="share__button js__btn"
+          // disabled
+          onClick={this.handleClick}
+        >
           <i className="far fa-address-card share__button--icon"></i>
           <p className="share__button--text">Crear tarjeta</p>
         </button>

@@ -20,6 +20,7 @@ class Card extends React.Component {
         <Forms
           handleInputChange={this.props.handleInputChange}
           handleRadioClick={this.props.handleRadioClick}
+          handleShareClick={this.props.handleShareClick}
           name={this.props.name}
           job={this.props.job}
           photo={this.props.photo}
