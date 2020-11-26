@@ -33,6 +33,7 @@ class Card extends React.Component {
           apiSuccess={this.props.apiSuccess}
           apiCardUrl={this.props.apiCardUrl}
           apiError={this.props.apiError}
+          isClickable={this.props.isClickable}
         />
       </main>
     );

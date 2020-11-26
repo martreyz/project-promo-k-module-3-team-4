@@ -30,19 +30,38 @@ class App extends React.Component {
       apiSuccess: false,
       apiCardUrl: '',
       apiError: '',
-      clickable: false
+      isClickable: false,
     };
   }
 
   handleInputChange(name, value) {
-    this.setState({
-      [name]: value,
-    });
-    if (name === 'photo') {
-      this.setState({
-        photoMin: value,
-      });
-    }
+    this.setState(
+      {
+        [name]: value,
+      },
+      () => {
+        if (name === 'photo') {
+          this.setState({
+            photoMin: value,
+          });
+        }
+        let clickable = false;
+        if (
+          this.state.name.length !== 0 &&
+          this.state.job.length !== 0 &&
+          this.state.photo.includes('64') &&
+          this.state.mail.length !== 0 &&
+          this.state.linkedin.length !== 0 &&
+          this.state.phone.length !== 0 &&
+          this.state.github.length !== 0
+        ) {
+          clickable = true;
+        }
+        this.setState((prevState) => ({
+          isClickable: (prevState.isClickable = clickable),
+        }));
+      }
+    );
   }
 
   handleRadioClick(value) {
@@ -119,17 +138,36 @@ class App extends React.Component {
 
   getLocalStorage() {
     const data = JSON.parse(localStorage.getItem('data'));
-    this.setState({
-      name: data.name,
-      job: data.job,
-      photo: data.photo,
-      phone: data.phone,
-      mail: data.mail,
-      linkedin: data.linkedin,
-      github: data.github,
-      palette: data.palette,
-      photoMin: data.photo
-    });
+    this.setState(
+      {
+        name: data.name,
+        job: data.job,
+        photo: data.photo,
+        phone: data.phone,
+        mail: data.mail,
+        linkedin: data.linkedin,
+        github: data.github,
+        palette: data.palette,
+        photoMin: data.photoMin,
+      },
+      () => {
+        let clickable = false;
+        if (
+          this.state.name.length !== 0 &&
+          this.state.job.length !== 0 &&
+          this.state.photo.includes('64') &&
+          this.state.mail.length !== 0 &&
+          this.state.linkedin.length !== 0 &&
+          this.state.phone.length !== 0 &&
+          this.state.github.length !== 0
+        ) {
+          clickable = true;
+        }
+        this.setState((prevState) => ({
+          isClickable: (prevState.isClickable = clickable),
+        }));
+      }
+    );
   }
 
   render() {
@@ -156,6 +194,7 @@ class App extends React.Component {
               apiSuccess={this.state.apiSuccess}
               apiCardUrl={this.state.apiCardUrl}
               apiError={this.state.apiError}
+              isClickable={this.state.isClickable}
             />
           </Route>
         </Switch>
