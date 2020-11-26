@@ -10,19 +10,10 @@ class Forms extends React.Component {
   render() {
     return (
       <section className="main-aplication__section">
-        <Collapsable
-          name="Diseña"
-          icon="fas fa-object-ungroup container-collapsable"
-        >
-          <Design
-            handleRadioClick={this.props.handleRadioClick}
-            palette={this.props.palette}
-          />
+        <Collapsable name="Diseña" icon="fas fa-object-ungroup container-collapsable">
+          <Design handleRadioClick={this.props.handleRadioClick} palette={this.props.palette} />
         </Collapsable>
-        <Collapsable
-          name="Rellena"
-          icon="far fa-keyboard container-collapsable"
-        >
+        <Collapsable name="Rellena" icon="far fa-keyboard container-collapsable">
           <Fill
             handleInputChange={this.props.handleInputChange}
             name={this.props.name}
@@ -35,11 +26,13 @@ class Forms extends React.Component {
             photoMin={this.props.photoMin}
           />
         </Collapsable>
-        <Collapsable
-          name="Comparte"
-          icon="fas fa-share-alt container-collapsable"
-        >
-          <Share handleShareClick={this.props.handleShareClick} />
+        <Collapsable name="Comparte" icon="fas fa-share-alt container-collapsable">
+          <Share
+            handleShareClick={this.props.handleShareClick}
+            apiSuccess={this.props.apiSuccess}
+            apiCardUrl={this.props.apiCardUrl}
+            apiError={this.props.apiError}
+          />
         </Collapsable>
       </section>
     );

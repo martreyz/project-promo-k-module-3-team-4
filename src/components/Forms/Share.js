@@ -23,7 +23,18 @@ class Share extends React.Component {
           <p className="share__button--text">Crear tarjeta</p>
         </button>
         <div className="share__finish js__share__finish js__finish-hidden">
-          <h3 className="share__finish--title">La tarjeta ha sido creada:</h3>
+          <h3 className="share__finish--title">
+            {this.props.apiCardUrl ? (
+              <>
+                <p>La tarjeta ha sido creada: </p>
+                <a href={this.props.apiCardUrl} title="card Link" target="_blank">
+                  {this.props.apiCardUrl}
+                </a>
+              </>
+            ) : (
+              this.props.apiError
+            )}
+          </h3>
           <p className="share__finish--text"></p>
           <a className="share__finish--anchor" href="/" target="blank">
             <i className="fab fa-twitter anchor-icon"></i>

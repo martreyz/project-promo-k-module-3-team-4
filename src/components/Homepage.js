@@ -6,33 +6,26 @@ import '../stylesheets/layout/Homepage.scss';
 class Landing extends React.Component {
   render() {
     return (
-      <main class="main">
-        <img
-          class="main__logo"
-          src={logo}
-          alt="Logo de la página"
-          title="Logo de la página"
-        />
-        <h1 class="main__title">Crea tu tarjeta de visita</h1>
-        <p class="main__text">
-          Crea mejores contactos profesionales de forma fácil y cómoda
-        </p>
-        <div class="main__icons">
-          <div class="main__icons__item">
-            <i class="far fa-object-ungroup main__icons__item__logo"></i>
-            <p class="main__icons__item__text">Diseña</p>
+      <main className="main">
+        <img className="main__logo" src={logo} alt="Logo de la página" title="Logo de la página" />
+        <h1 className="main__title">Crea tu tarjeta de visita</h1>
+        <p className="main__text">Crea mejores contactos profesionales de forma fácil y cómoda</p>
+        <div className="main__icons">
+          <div className="main__icons__item">
+            <i className="far fa-object-ungroup main__icons__item__logo"></i>
+            <p className="main__icons__item__text">Diseña</p>
           </div>
-          <div class="main__icons__item">
-            <i class="far fa-keyboard main__icons__item__logo"></i>
-            <p class="main__icons__item__text">Rellena</p>
+          <div className="main__icons__item">
+            <i className="far fa-keyboard main__icons__item__logo"></i>
+            <p className="main__icons__item__text">Rellena</p>
           </div>
-          <div class="main__icons__item">
-            <i class="fas fa-share-alt main__icons__item__logo"></i>
-            <p class="main__icons__item__text">Comparte</p>
+          <div className="main__icons__item">
+            <i className="fas fa-share-alt main__icons__item__logo"></i>
+            <p className="main__icons__item__text">Comparte</p>
           </div>
         </div>
         <Link to="/card">
-          <button class="uppercase links main__button">Comenzar</button>
+          <button className="uppercase links main__button">Comenzar</button>
         </Link>
       </main>
     );

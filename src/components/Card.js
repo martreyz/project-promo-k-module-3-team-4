@@ -30,6 +30,9 @@ class Card extends React.Component {
           mail={this.props.mail}
           palette={this.props.palette}
           photoMin={this.props.photoMin}
+          apiSuccess={this.props.apiSuccess}
+          apiCardUrl={this.props.apiCardUrl}
+          apiError={this.props.apiError}
         />
       </main>
     );
