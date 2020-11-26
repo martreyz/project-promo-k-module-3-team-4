@@ -119,6 +119,7 @@ class App extends React.Component {
       github: '',
       palette: 1,
       photoMin: '',
+      isClickable: false,
     });
   }
 
