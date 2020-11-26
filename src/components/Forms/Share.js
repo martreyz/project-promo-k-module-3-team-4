@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../stylesheets/layout/Forms/Share.scss';
 
+
+
 class Share extends React.Component {
   constructor(props) {
     super(props);
@@ -13,30 +15,39 @@ class Share extends React.Component {
 
   handleClick() {
     this.props.handleShareClick();
-    this.setState((prevState) => {return {clickable : !this.state.clickable}});
   }
 
-  // handleClick() {
-  //   this.setState((prevState, props) => {
-  //     let nextStyling;
-  //     if (prevState.styling === 'info') {
-  //       nextStyling = 'danger';
-  //     } else {
-  //       nextStyling = 'info';
-  //     }
+  // validateCreateBtn () {
+  //   const {name, job, photoMin, mail, linkedin, phone, github} = this.props;
+  //   let response = false;
+  //   if(name.length !== 0 && job.length !== 0 && photoMin.length !== 0 && mail.length !== 0 && linkedin.length !== 0 && phone.length !== 0 && github.length !==0) {
+  //     response = true;
+  //     console.log("hola")
+  //   }
+  //   this.setState(( prevState) => ({
+  //     clickable : [prevState.clickable = response]
+  //   }))
 
-  //     return {
-  //       styling: nextStyling
-  //     };
-  //   });
   // }
-
+  componentDidUpdate(){ 
+    const {name, job, photoMin, mail, linkedin, phone, github} = this.props;
+    let response = false;
+    if(name.length !== 0 && job.length !== 0 && photoMin.length !== 0 && mail.length !== 0 && linkedin.length !== 0 && phone.length !== 0 && github.length !==0) {
+      response = true;
+      console.log("hola")
+    }
+    this.setState(( prevState) => ({
+      clickable : [prevState.clickable = response]
+    }))
+  }
+  
+  
   render() {
     return (
       <div className="share__section js-share__section">
         <button
-          className="share__button js__btn"
-          //disabled={true}
+          className={this.state.clickable ? "js-button-create": "share__button js__btn"}
+          disabled={this.state.clickable}
           onClick={this.handleClick}
         >
           <i className="far fa-address-card share__button--icon"></i>

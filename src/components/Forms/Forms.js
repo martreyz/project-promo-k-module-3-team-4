@@ -32,6 +32,13 @@ class Forms extends React.Component {
             apiSuccess={this.props.apiSuccess}
             apiCardUrl={this.props.apiCardUrl}
             apiError={this.props.apiError}
+            name={this.props.name}
+            job={this.props.job}
+            phone={this.props.phone}
+            linkedin={this.props.linkedin}
+            github={this.props.github}
+            mail={this.props.mail}
+            photoMin={this.props.photoMin}
           />
         </Collapsable>
       </section>
