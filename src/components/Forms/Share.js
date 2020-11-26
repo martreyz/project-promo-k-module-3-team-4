@@ -5,6 +5,9 @@ class Share extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      twitter: encodeURIComponent('He creado una tarjeta de visita gracias a las Skriptonitas'),
+    };
   }
 
   handleClick() {
@@ -36,7 +39,11 @@ class Share extends React.Component {
             )}
           </h3>
           <p className="share__finish--text"></p>
-          <a className="share__finish--anchor" href="/" target="blank">
+          <a
+            className="share__finish--anchor"
+            href={`https://twitter.com/intent/tweet?text=${this.state.twitter}&url=${this.props.apiCardUrl}`}
+            target="blank"
+          >
             <i className="fab fa-twitter anchor-icon"></i>
             <p className="anchor-text">Compartir en twitter</p>
           </a>
