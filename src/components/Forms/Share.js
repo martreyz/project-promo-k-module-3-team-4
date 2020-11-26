@@ -7,19 +7,36 @@ class Share extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       twitter: encodeURIComponent('He creado una tarjeta de visita gracias a las Skriptonitas'),
+      clickable: false
     };
   }
 
   handleClick() {
     this.props.handleShareClick();
+    this.setState((prevState) => {return {clickable : !this.state.clickable}});
   }
+
+  // handleClick() {
+  //   this.setState((prevState, props) => {
+  //     let nextStyling;
+  //     if (prevState.styling === 'info') {
+  //       nextStyling = 'danger';
+  //     } else {
+  //       nextStyling = 'info';
+  //     }
+
+  //     return {
+  //       styling: nextStyling
+  //     };
+  //   });
+  // }
 
   render() {
     return (
       <div className="share__section js-share__section">
         <button
           className="share__button js__btn"
-          // disabled
+          //disabled={true}
           onClick={this.handleClick}
         >
           <i className="far fa-address-card share__button--icon"></i>
@@ -30,7 +47,7 @@ class Share extends React.Component {
             {this.props.apiCardUrl ? (
               <>
                 <p>La tarjeta ha sido creada: </p>
-                <a href={this.props.apiCardUrl} title="card Link" target="_blank">
+                <a href={this.props.apiCardUrl} title="card Link" rel="noreferrer" target="_blank">
                   {this.props.apiCardUrl}
                 </a>
               </>

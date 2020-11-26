@@ -115,7 +115,7 @@ class Fill extends React.Component {
           inputID="github"
           inputName="github"
           inputPlaceholder="Ej: @sally-hill"
-          classN="fill__form--input js__form js-input-github"
+          classN="fill__form--input fill__form--inputGitHub js__form js-input-github"
           handleInputChange={this.props.handleInputChange}
           value={this.props.github}
         />

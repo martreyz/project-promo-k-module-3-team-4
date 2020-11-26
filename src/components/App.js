@@ -30,6 +30,7 @@ class App extends React.Component {
       apiSuccess: false,
       apiCardUrl: '',
       apiError: '',
+      clickable: false
     };
   }
 
@@ -127,6 +128,7 @@ class App extends React.Component {
       linkedin: data.linkedin,
       github: data.github,
       palette: data.palette,
+      photoMin: data.photo
     });
   }
 
