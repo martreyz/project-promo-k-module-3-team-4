@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import '../../stylesheets/layout/Forms/Share.scss';
+import { useState } from "react";
+import "../../stylesheets/layout/Forms/Share.scss";
 
 const Share = (props) => {
   const [twitter] = useState(
     encodeURIComponent(
-      'He creado una tarjeta de visita gracias a las Skriptonitas'
+      "He creado una tarjeta de visita gracias a las Skriptonitas"
     )
   );
   const [isHidden, setIsHidden] = useState(true);
@@ -20,7 +20,9 @@ const Share = (props) => {
         onClick={handleClick}
         disabled={props.isClickable ? false : true}
         className={
-          props.isClickable ? 'share__button--create' : 'share__button js__btn'
+          props.isClickable
+            ? "share__button--create share__button"
+            : "share__button js__btn"
         }
       >
         <i className="far fa-address-card share__button--icon"></i>
@@ -29,8 +31,8 @@ const Share = (props) => {
       <div
         className={
           isHidden
-            ? 'share__finish js__share__finish js__finish-hidden'
-            : 'share__finish js__share__finish'
+            ? "share__finish js__share__finish js__finish-hidden"
+            : "share__finish js__share__finish"
         }
       >
         {props.apiCardUrl ? (

@@ -1,4 +1,4 @@
-@import '../../core/variables';
+@import "../../core/variables";
 
 .share {
   &__button {
@@ -14,31 +14,9 @@
     align-items: center;
     margin: 30px auto 30px auto;
     z-index: 20;
-    &--icon {
-      font-size: 22px;
+    &--create {
+      background-color: $dull-orange;
     }
-    &--text {
-      font-family: $font-generalTexts;
-      font-size: 18px;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-left: 9px;
-    }
-  }
-  &__button--create {
-    cursor: pointer;
-    width: 199px;
-    height: 50px;
-    background-color: $dull-orange;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-    color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px auto 30px auto;
-    z-index: 20;
     &--icon {
       font-size: 22px;
     }
